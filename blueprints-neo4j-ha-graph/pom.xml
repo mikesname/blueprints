@@ -8,9 +8,9 @@
         <version>2.3.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>blueprints-neo4j-graph</artifactId>
+    <artifactId>blueprints-neo4j-ha-graph</artifactId>
     <name>Blueprints-Neo4jGraph</name>
-    <description>Blueprints property graph implementation for the Neo4j graph database</description>
+    <description>Blueprints property graph implementation for the Neo4j High Availability graph database</description>
     <dependencies>
         <dependency>
             <groupId>com.tinkerpop.blueprints</groupId>
@@ -18,10 +18,27 @@
             <version>${blueprints.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.tinkerpop.blueprints</groupId>
+            <artifactId>blueprints-neo4j-graph</artifactId>
+            <version>${blueprints.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.neo4j</groupId>
             <artifactId>neo4j</artifactId>
             <version>1.9.M05</version>
             <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.neo4j</groupId>
+            <artifactId>neo4j-ha</artifactId>
+            <version>1.9.M05</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.neo4j</groupId>
+            <artifactId>neo4j-management</artifactId>
+            <version>1.9.M05</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.tinkerpop.blueprints</groupId>
